@@ -16,10 +16,10 @@
           <i class="fa fa-tachometer"></i>
           <span>后台主页</span>
         </el-menu-item>
-        <el-menu-item index="/dashboard/order">
+        <!-- <el-menu-item index="/dashboard/order">
           <i class="fa fa-large fa-reorder"></i>
           <span>订单列表</span>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-submenu index="goods">
           <template slot="title">
             <i class="fa fa-shopping-bag"></i>
@@ -34,10 +34,10 @@
             <span>商品设置</span>
           </el-menu-item>
         </el-submenu>
-        <el-menu-item index="/dashboard/shopcart">
+        <!-- <el-menu-item index="/dashboard/shopcart">
           <i class="fa fa-large fa-shopping-cart"></i>
           <span>购物车</span>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-menu-item index="/dashboard/user">
           <i class="fa fa-large fa-users"></i>
           <span>用户列表</span>
@@ -59,14 +59,14 @@
             <i class="fa fa-circle"></i>
             <span>公告管理</span>
           </el-menu-item>
-          <el-menu-item index="/dashboard/freight">
+          <!-- <el-menu-item index="/dashboard/freight">
             <i class="fa fa-circle"></i>
             <span>运费模板</span>
-          </el-menu-item>
-          <el-menu-item index="/dashboard/shipper">
+          </el-menu-item> -->
+          <!-- <el-menu-item index="/dashboard/shipper">
             <i class="fa fa-circle"></i>
             <span>快递设置</span>
-          </el-menu-item>
+          </el-menu-item> -->
           <el-menu-item index="/dashboard/admin">
             <i class="fa fa-circle"></i>
             <span>管理员</span>

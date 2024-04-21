@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: '海风小店',
+  title: 'Admin',
 
   /**
    * @type {boolean} true | false

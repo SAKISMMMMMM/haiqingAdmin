@@ -6,24 +6,7 @@
             </el-breadcrumb>
         </div>
         <div class="content-main clearfix">
-            <div class="notice">
-                <div class="l">本演示后台数据为演示数据，可以随意操作，系统每5分钟重置一次</div>
-                <div class="r" v-if="resetVision">
-                    <label>重置倒计时：</label>
-                    <countdown class="count" endTime="" :callback="callback" endText="已经结束了"></countdown>
-                </div>
-            </div>
-            <div class="github">
-                <a target="_blank" href="https://github.com/iamdarcy">github地址</a>
-                <div class="l">请您在github给个star。 技术交流QQ群：824781955</div>
-            </div>
             <div class="header clearfix">
-                <el-card class="box-card card-red">
-                    <router-link class="link-color" :to="{ path: '/dashboard/order' }">
-                        <h1>{{infoData.orderToDelivery}}</h1>
-                        <div class="text item">待发货订单</div>
-                    </router-link>
-                </el-card>
                 <el-card class="box-card card-green">
                     <router-link class="link-color" :to="{ path: '/dashboard/goods' }">
                         <h1>{{infoData.goodsOnsale}}</h1>
@@ -85,66 +68,9 @@
                             <h3 style="float: right;">{{mainInfo.oldUser}}</h3>
                         </div>
                     </el-card>
-                    <el-card class="box-card2">
-                        <div slot="header" class="clearfix">
-                            <span style="line-height: 36px;">下单</span>
-                        </div>
-                        <div class="text item">
-                            <span>加入购物车</span>
-                            <h3 style="float: right;">{{mainInfo.addCart}}</h3>
-                        </div>
-                        <div class="text item">
-                            <span>提交订单数/金额</span>
-                            <h3 style="float: right;">{{mainInfo.addOrderNum}} / {{mainInfo.addOrderSum}}</h3>
-                        </div>
-                    </el-card>
-                    <el-card class="box-card2">
-                        <div slot="header" class="clearfix">
-                            <span style="line-height: 36px;">支付</span>
-                        </div>
-                        <div class="text item">
-                            <span>成交订单数</span>
-                            <h3 style="float: right;">{{mainInfo.payOrderNum}}</h3>
-                        </div>
-                        <div class="text item">
-                            <span>成交金额</span>
-                            <h3 style="float: right;">{{mainInfo.payOrderSum}}</h3>
-                        </div>
-                    </el-card>
+                   
                 </div>
                 <div class="line clearfix"></div>
-                <div class="block-4 clearfix">
-                    <el-card class="box-card">
-                        <div class="text item">
-                            <span>客单价</span>
-                            <p style="float: right;">{{mainInfo.payOrderSum / mainInfo.payOrderNum | numFilter}}</p>
-                        </div>
-                        <p class="tips">成交金额/成交订单数</p>
-                    </el-card>
-                    <el-card class="box-card">
-                        <div class="text item">
-                            <span>下单转化率</span>
-                            <p style="float: right;">
-                                {{mainInfo.addOrderNum / (mainInfo.newUser + mainInfo.oldUser) | numFilter}}</p>
-                        </div>
-                        <p class="tips">下单人数/访问人数</p>
-                    </el-card>
-                    <el-card class="box-card">
-                        <div class="text item">
-                            <span>下单-支付转化率</span>
-                            <p style="float: right;">{{mainInfo.payOrderNum / mainInfo.addOrderNum | numFilter}}</p>
-                        </div>
-                        <p class="tips">支付人数/下单人数</p>
-                    </el-card>
-                    <el-card class="box-card">
-                        <div class="text item">
-                            <span>支付转化率</span>
-                            <p style="float: right;">
-                                {{mainInfo.payOrderNum / (mainInfo.newUser + mainInfo.oldUser) | numFilter}}</p>
-                        </div>
-                        <p class="tips">支付人数/访问人数</p>
-                    </el-card>
-                </div>
 
             </div>
         </div>

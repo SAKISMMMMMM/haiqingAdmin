@@ -36,6 +36,11 @@ module.exports = {
       warnings: false,
       errors: true,
     },
+    proxy: {
+      '/admin': {
+          target: 'https://hongyuanchuangzhan.online:8360/admin'
+      }
+    },
     // lintOnSave: false,
     before: require("./mock/mock-server.js"),
   },
